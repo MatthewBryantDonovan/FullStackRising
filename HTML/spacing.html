@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FSR: Spacing</title>
+</head>
+
+<style>
+    .box-50-px{
+        border: 6px solid orange;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .box-made-with-padding-1{
+        border: 6px solid orange;
+        width: 10px;
+        height: 20px;
+        /* If only 2 are specified it will be (Top and Bottom) and (Left and Right) */
+        padding: 15px 20px;    
+    }
+    
+    .box-made-with-padding-2{
+        border: 6px solid orange;
+        width: 10px;
+        height: 20px;
+        /* If 4 values are specified it will be (Top Right Bottom Left) */
+        padding: 20px 20px 10px 20px;    
+
+    }
+    div{
+        margin: 25px;
+    }
+
+    .red{
+        background-color: red;
+    }
+    
+    .blue{
+        background-color: blue;
+    }
+    
+    .green{
+        background-color: green;
+    }
+    
+    .purple{
+        background-color: purple;
+    }
+
+    .box-in-the-middle{
+        margin: auto;
+    }
+
+    .container{
+        height: 500px;
+        border: 1px solid black;
+    }
+
+</style>
+
+<body>
+
+    <p>Don't get in - (T) (R) o u (B) (L) e</p>
+    <p>Handy phrase to remember the import order on properties like margin</p>
+    <ul>
+        <li>Top</li>
+        <li>Right</li>
+        <li>Bottom</li>
+        <li>Left</li>
+    </ul>
+
+    <p> ~~~ Right click inside one of the boxes below and 'inspect' to view the box model! ~~~ </p>
+    <div class="box-50-px purple"></div>
+    <div class="box-made-with-padding-1 red"></div>
+    <div class="box-made-with-padding-2 green"></div>
+    
+    <p>Margin auto to evenly space out content</p>
+    <div class="container">
+        <div class="box-50-px blue box-in-the-middle"></div>
+    </div>
+
+    <!-- Look into display flex for expansive spacing options -->
+    
+</body>
+</html>

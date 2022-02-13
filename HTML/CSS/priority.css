@@ -1,0 +1,16 @@
+#red{
+    background-color: red;
+}
+
+.super-important-red{
+    background-color: red !important;
+}
+
+.super-important-pink{
+    background-color: yellow !important;
+}
+
+li li{
+    list-style-type: circle;
+    padding-left: 10px;
+}

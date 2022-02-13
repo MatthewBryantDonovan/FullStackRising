@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/priority.css">
+    <title>FSR: Priority</title>
+</head>
+
+<style>
+    #red{
+        background-color: red;
+    }
+
+    .green{
+        background-color: green;
+    }
+
+    /* If the same property is used later with the same selector the last will take effect */
+    .super-important-pink{
+        background-color: yellow !important;
+    }
+
+    /* We can use !important to bump priority */
+    .super-important-pink{
+        background-color: pink !important;
+    }
+</style>
+
+<body>
+    
+    <!-- Cascading Style Sheets (CSS) -->
+    <h1>All About Priority</h1>
+
+    <p>Let's run through some examples to drill into CSS priority</p>
+    <ul>
+        <li>Class
+            <li class="green"></li>
+        </li>
+        <li>Class + ID
+            <li id="red" class="green" ></li>
+        </li>
+        <li>Class + ID + Inline
+            <li id="red" class="green" style="background-color: blue;"></li>
+        </li>
+        <br/>
+
+        <li>An !Important Class
+            <li class="green super-important-red" style="background-color: blue;"></li>
+        </li>
+        <li>Inline CSS and Interal CSS(important) and External CSS(important)
+            <li id="red" class="green super-important-pink super-important-red" style="background-color: blue;"></li>
+        </li>
+        <li>Inline CSS(important) and Interal CSS(important) and External CSS(important)
+            <li id="red" class="green super-important-pink super-important-red" style="background-color: blue !important;"></li>
+        </li>
+    </ul>
+
+    <p>Priority Tiers</p>
+    <ul>
+        <li>!important - Highest Priority</li>
+        <li>Inline</li>
+        <li>Internal</li>
+        <li>External - Lowest Priority</li>
+    </ul>
+</body>
+
+</html>
