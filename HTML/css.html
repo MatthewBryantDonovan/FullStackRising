@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/selectors.css">
+    <title>FSR: CSS</title>
+</head>
+
+<style>
+    /* Using an id selector -> #XXX */
+    #selectors-section{
+        background-color: rgb(25, 25, 194, .4);
+    }
+
+    /* Using a class selector -> .XXX */
+    .red-box{
+        border: 1px solid red;
+    }
+
+    .spacing{
+        padding: 5px;
+        margin: 10px;
+    }
+
+    /* Pseudo-class - used for states of an element */
+    #selectors-section:hover{
+        background-color: rgb(25, 25, 194, .1);
+    }
+
+    /* Combinators - used for more selectivity */
+    /* This example uses a space to select a decendant of the ID */
+    #selectors-section:hover p{
+        font-size: 20px;
+    }
+
+</style>
+
+<body>
+    
+    <!-- Cascading Style Sheets (CSS) -->
+    <h1>Stylin'</h1>
+
+    <p>We can apply style to the page using CSS this page is using 3 different ways to apply style</p>
+    <ul>
+        <li style="font-size: x-large; border: 1px solid blue">Inline CSS - look in the li tag where this text is to see the stylings</li>
+        <li class="red-box spacing">Internal CSS - Look above the body tag to see the style tag</li>
+        <li class="green-box spacing">External CSS - another file is being used to apply stylings see ./CSS/myStyles.css</li>
+    </ul>
+
+    <p> ~~~ Right click inside the green-box and click inspect to view the box model! ~~~ </p>
+
+    <!-- Selectors ( use-kabob-case )-->
+    <div id="selectors-section">
+        <p>The parent of this p tag has an id selector with the value selectors-section.
+            which we can target it with the hashtag EX: #selectors </p>
+        <p class="red">This p tag has an class  with the value selectors.
+            which we can target it with the hashtag EX: #selectors</p>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+    Text Cases
+    ----------
+    kabob-case
+    camelCase
+    Title Case
+    snake_case
+ -->
